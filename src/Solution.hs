@@ -113,7 +113,7 @@ typeOf = typeOf' []
       case typeOf' ctx term of
         Left exception -> Left exception
         Right (PairT _ typeOfSecondTerm) -> Right typeOfSecondTerm
-        Right _ -> Left "Fst: argument is not a pair"
+        Right _ -> Left "Snd: argument is not a pair"
 
     typeOf' ctx (Nil typeOfNil) = Right $ List typeOfNil
 
